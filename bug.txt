@@ -1,0 +1,25 @@
+css:
+/*missing slash*/ in  background-color: lightblue;
+
+/* ERROR FIXED: needed for left to work */ in:
+ position: relative;
+
+
+script:
+/*missing let*/ in:
+ let counter = 0;
+
+/*wrong id*/ in:
+ document.getElementById("nameInput");
+
+/*missing let */ in:
+ let interval = setInterval(function () {
+
+/*typo error*/ in:
+ document.body.style.backgroundColor = "yellow";
+
+/*wrong id*/ in:
+ document.getElementById("box");
+
+/* was ==*/ in:
+ counter = 10;

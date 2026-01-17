@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buggy Example</title>
+<style>
+body {
+background-color: lightblue; /*missing slash*/
+}
+
+#box {
+width: 100px;
+height: 100px;
+background: red;
+position: relative; /* ERROR FIXED: needed for left to work */
+}
+</style>
+</head>
+<body>
+
+<h1>Bug Practice</h1>
+
+<input id="nameInput" type="text">
+<button onclick="start()">Start</button> 
+
+<div id="box"></div>
+
+<script>
+let counter = 0;/*missing let*/
+
+function start() {
+let input = document.getElementById("nameInput");/*wrong id*/
+console.log(input.value);
+
+let interval = setInterval(function () { /*missing let */
+counter++;
+
+document.body.style.backgroundColor = "yellow";/*typo error*/
+
+let box = document.getElementById("box");/*wrong id*/
+box.style.left = counter + "px";
+
+counter = 10;/* was ==*/
+});
+}
+</script>
+
+</body>
+</html>
+
